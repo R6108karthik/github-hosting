@@ -1,0 +1,22 @@
+/* .card-title {
+    border: 2px solid #FF5733; 
+    padding: 10px;
+    border-radius: 5px; 
+}
+h2.text-center {
+    border-bottom: #FF5733;
+    
+}
+
+h2   { text-decoration: underline;color:gray }
+ */
+
+ h2 {
+    color: rgb(0, 0, 0);
+    font: 700 16px Open Sans;
+    top: 0px;
+    margin: 0px;
+    padding: 5px;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgb(136, 136, 136);
+}

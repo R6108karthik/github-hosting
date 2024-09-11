@@ -1,0 +1,38 @@
+<h2 style="text-align: center;">Add New Application</h2><br><br><br>
+<form (ngSubmit)="addApp()" #appForm="ngForm" novalidate>
+  <div class="form-group">
+    <label for="appName">Application Name :</label>
+    <div class="position-relative">
+        <!-- Validation message for Application Name -->
+        <div *ngIf="appName.invalid && appName.touched" class="text-danger validation-message">
+            Application Name is required.
+        </div>
+        <input type="text" id="appName" class="form-control" [(ngModel)]="newApp.applicationName" name="appName" required #appName="ngModel">
+    </div>
+</div>
+<br>
+
+<div class="form-group">
+  <label for="appPath">Application Path :</label>
+  <div class="position-relative">
+      <!-- Validation message for Application Path -->
+      <div *ngIf="appPath.invalid && appPath.touched" class="text-danger validation-message">
+          Application Path is required.
+      </div>
+      <input type="text" id="appPath" class="form-control" [(ngModel)]="newApp.applicationPath" name="appPath" required #appPath="ngModel">
+  </div>
+</div>
+<br>
+
+  <div class="form-group">
+    <label for="params">Parameters :</label>
+    <input type="text" id="params" class="form-control" [(ngModel)]="newApp.parameters" name="params">
+  </div>
+
+  <button type="submit" class="btn btn-success" [disabled]="!appForm.valid">Add Application</button>
+</form>
+
+<!-- Success message -->
+<div *ngIf="isSuccess" class="alert alert-success mt-3">
+  Application added successfully!
+</div>
